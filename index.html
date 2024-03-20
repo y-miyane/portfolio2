@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>模写コーディング | 写真館</title>
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./sp_style.css">
+        <script src="./jquery-3.7.1.min.js"></script>
+    </head>
+    <body id="top">
+        <div id="contents-wrap" class="fade-in">
+             <div class="trace-nav-set fixed">
+                    <div class="trace-nav-set-inner">
+                        <p class="trace-nav_logo">
+                            <a href="">
+                                <img src="" alt="Studio Tremo">
+                            </a>
+                        </p>
+                        <ul class="trace-nav">
+                            <li class="gnav01">
+                                <a href="">ホーム</a>
+                            </li>
+                            <li class="gnav02">
+                                <a href="">私たちについて</a>
+                            </li>
+                            <li class="gnav03">
+                                <a href="">ギャラリー</a>
+                            </li>
+                            <li class="gnav04">
+                                <a href="">撮影プラン</a>
+                            </li>
+                            <li class="gnav05">
+                                <a href="">よくあるご質問</a>
+                            </li>
+                            <li class="gnav06">
+                                <a href="">お客様の声</a>
+                            </li>
+                            <li class="gnav07">
+                                <a href="">ブログ</a>
+                            </li>
+                            <li class="gnav08">
+                                <a href="">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </div>
+             </div>
+            
+            <header id="header">
+                <nav class="header-nav_sp sp">
+                    <div class="slide-menu_btn">
+                        <a class="menu-trigger" href="">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="slide-menu_nav">
+                        <ul class="gnav_sp">
+                            <li class="gnav01">
+                                <a href="/">ホーム</a>
+                            </li>
+                            <li class="gnav02">
+                                <a href="">私たちについて</a>
+                            </li>
+                            <li class="gnav03">
+                                <a href="">ギャラリー</a>
+                            </li>
+                            <li class="gnav04">
+                                <a href="">撮影プラン</a>
+                            </li>
+                            <li class="gnav05">
+                                <a href="">よくあるご質問</a>
+                            </li>
+                            <li class="gnav06">
+                                <a href="">お客様の声</a>
+                            </li>
+                            <li class="gnav07">
+                                <a href="">ブログ</a>
+                            </li>
+                            <li class="gnav08">
+                                <a href="">お問い合わせ</a>
+                            </li>
+                        </ul>
+                        <div class="sns-nav_sp">
+                            <a href="" class="facebook" target="_blank">
+                                <img src="" alt="Facebook">
+                            </a>
+                            <a href="" class="instagram" target="_blank">
+                                <img src="" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="main-visual-area">
+                    <h1 class="main-visual_logo">
+                        <a href="">
+                        </a>
+                    </h1>
+                    <div class="swiper-container no-swipe swiper-container-horizontal swiper-container-fade">
+                        <div class="swiper-wrapper main-visual_slide" style="transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 1049px; transform: translate3d(0px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+                                <div class="slide-img">
+                                    <div class="m-slide04"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1049px; transform: translate3d(-1049px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+                                <div class="slide-img">
+                                    <div class="m-slide01"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1049px; transform: translate3d(-2098px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+                                <div class="slide-img">
+                                    <div class="m-slide02"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1049px; transform: translate3d(-3147px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+                                <div class="slide-img">
+                                    <div class="m-slide03"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="3" style="width: 1049px; transform: translate3d(-4196px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+                                <div class="slide-img">
+                                    <div class="m-slide04"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1049px; transform: translate3d(-5245px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+                                    <div class="slide-img">
+                                        <div class="m-slide01"></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-header-nav-area">
+
+                    <!-- tagline -->
+                    <div class="top-header-nav-area_tagline">
+                        <p class="jpn" style="opacity: 1;">
+                            <span class="move">自</span>
+                            <span class="move">分</span>
+                            <span class="move">ら</span>
+                            <span class="move">し</span>
+                            <span class="move">い</span>
+                            <span class="move">、</span>
+                            <span class="move">そ</span>
+                            <span class="move">の</span>
+                            <span class="move">瞬</span>
+                            <span class="move">間</span>
+                            <span class="move">を</span>
+                            <span class="move">。</span>
+                        </p>
+                        <p class="eng fade-in">
+                            Own your time.
+                        </p>
+                    </div>
+
+                    <!-- header-gnav_pc -->
+                                    <nav class="pc">
+                        <ul class="header-gnav_pc fade-in">
+                            <li class="gnav01">
+                                <a href="/">ホーム</a>
+                            </li>
+                            <li class="gnav02">
+                                <a href="">私たちについて</a>
+                            </li>
+                            <li class="gnav03">
+                                <a href="">ギャラリー</a>
+                            </li>
+                            <li class="gnav04">
+                                <a href="">撮影プラン</a>
+                            </li>
+                            <li class="gnav05">
+                                <a href="">よくあるご質問</a>
+                            </li>
+                            <li class="gnav06">
+                                <a href="">お客様の声</a>
+                            </li>
+                            <li class="gnav07">
+                                <a href="">ブログ</a>
+                            </li>
+                            <li class="gnav08">
+                                <a href="">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /header-gnav_pc -->
+
+                </div>
+
+            </header>
+            <div id="contents">
+                <section class="about-sec">
+                    <div class="about-sec_img-slide-wrapper"></div>
+                    <div class="about-sec_text-area fadein scrollin">
+
+                        <!-- about-sec_ttl -->
+                        <h2 class="about-sec_ttl">
+                            <span class="about-sec_ttl_inner1">
+                                <span class="about-sec_ttl_inner2">
+                                    <span class="jpn">私たちについて</span>
+                                </span>
+                            </span>
+                            <span class="eng">About</span>
+                        </h2>
+
+                        <!-- about-sec_lead -->
+                        <p class="about-sec_lead">
+                            5年後、10年後、写真を眺めたとき、
+                            <br>
+                            思わず微笑んでしまったり、
+                            <br>
+                            そこに写ってる人との思い出や想いに
+                            <br class="br-sp">
+                            思わず涙してしまったり。
+                            <br>
+                            写真を通してその時のことを
+                            <br class="br-sp">
+                            少しでも思い出してもらえるように。
+                            <br>
+                            そんなことを思いながら
+                            <br class="br-sp">
+                            日々写真を撮っています。
+                            <br>
+                            何気ない毎日も時が経ち、振り返るとき
+                            <br>
+                            大切な思い出になっていることを
+                            <br class="br-sp">
+                            願っています。
+                        </p>
+
+                        <!-- about-sec_link -->
+                        <p class="about-sec_link">
+                            <a href="" class="sec-link">more</a>
+                        </p>
+                        
+                    </div>
+                </section>
+
+                <section class="gallery-sec">
+                    <div class="gallery-sec_img-slide_large-wrapper"></div>
+                    <div class="gallery-sec_inner fadein scrollin">
+                        <div class="gallery-sec_inner_text">
+
+                            <!-- ttl -->
+                            <h2 class="sec-ttl gallery-sec_ttl">
+                                <span class="jpn">ギャラリー</span>
+                                <span class="eng">Gallery</span>
+                            </h2>
+
+                            <!-- lead -->
+                            <p class="gallery-sec_lead">
+                                Studio Tremoでは結婚式当日、ロケーション前撮り、家族写真の3つの撮影をメインにさせていただいています。
+                                いままでの撮影の実績をご覧ください。
+                            </p>
+
+                            <!-- gallery-sec_link -->
+                            <p class="gallery-sec_link">
+                                <a href="" class="sec-link">more</a>
+                            </p>
+                        </div>
+                        <div class="gallery-sec_inner_slide"></div>
+                    </div>
+                </section>
+
+                <section class="plan-sec fadein scrollin">
+                    <h2 class="sec-ttl">
+                        <span class="jpn">撮影プラン</span>
+                        <span class="eng">Plan</span>
+                    </h2>
+                    <ul class="plan-sec_category-list fadein scrollin">
+
+                        <!-- 1 -->
+                        <li class="marriage_cat fadein scrollin">
+                            <section>
+                                <!-- cat-num -->
+                                <span class="cat-num">01</span>
+                                <!-- cat-ttl -->
+                                <h3 class="cat-ttl">
+                                    <span class="cat-name">結婚式当日</span>
+                                    <span class="cat-tagline">＜ハレの日のふたりプラン＞</span>
+                                </h3>
+                                <!-- cat-icon -->
+                                <p class="cat-icon">
+                                    <span>
+                                        <img src="./images/plan1.png" alt="結婚式当日">
+                                    </span>
+                                </p>
+                                <!-- cat-lead -->
+                                <p class="cat-lead">
+                                    挙式・披露宴から二次会まで結婚式当日の撮影のお手伝いをさせていただきます。
+                                </p>
+                            </section>
+                        </li>
+
+                        <!-- 2 -->
+                        <li class="pre-shoot_cat fadein scrollin">
+                            <section>
+                                <!-- cat-num -->
+                                <span class="cat-num">02</span>
+                                <!-- cat-ttl -->
+                                <h3 class="cat-ttl">
+                                    <span class="cat-name">ロケーション前撮り</span>
+                                    <span class="cat-tagline">＜ふたりの願いを叶えるプラン＞</span>
+                                </h3>
+                                <!-- cat-icon -->
+                                <p class="cat-icon">
+                                    <span>
+                                        <img src="./images/plan2.png" alt="ロケーション前撮り">
+                                    </span>
+                                </p>
+                                <!-- cat-lead -->
+                                <p class="cat-lead">
+                                    ドレスや着物、普段着でお二人のオリジナルな前撮り写真を撮影させていただきます。
+                                </p>
+                            </section>
+                        </li>
+
+                        <!-- 3 -->
+                        <li class="family-photo_cat fadein scrollin">
+                            <section>
+                                <!-- cat-num -->
+                                <span class="cat-num">03</span>
+                                <!-- cat-ttl -->
+                                <h3 class="cat-ttl">
+                                    <span class="cat-name">家族写真</span>
+                                    <span class="cat-tagline">＜家族みんなの思い出プラン＞</span>
+                                </h3>
+                                <!-- cat-icon -->
+                                <p class="cat-icon">
+                                    <span>
+                                        <img src="./images/plan3.png" alt="家族写真">
+                                    </span>
+                                </p>
+                                <!-- cat-lead -->
+                                <p class="cat-lead">
+                                    マタニティや七五三、お宮参りなど家族の記念日の撮影をお手伝いさせていただきます。
+                                </p>
+                            </section>
+                        </li>
+                    </ul>
+                    <p class="plan-sec_sup-text fadein scrollin">
+                        上記以外にもお客様のご希望に沿ったオリジナルのプランも可能です。
+                        <br>
+                        お気軽にお問い合わせよりご相談ください。
+                    </p>
+                    <p class="plan-sec_link fadein scrollin">
+                        <a href="" class="sec-link">more</a>
+                    </p>
+                </section>
+                <div class="article-sec-wrapper">
+                    <section class="blog-sec article-sec fadein scrollin">
+
+                        <!-- ttl -->
+                        <h2 class="sec-ttl">
+                            <span class="jpn">ブログ</span>
+                            <span class="eng">Blog</span>
+                        </h2>
+
+                        <!-- article-sec_list -->
+                        <ul class="article-sec_list fadein scrollin">
+
+                            
+                            <li class="fadein scrollin">
+                                <a href="">
+                                    <!-- img -->
+                                    <p class="article-sec_img">
+                                        <img src="./images/blog1.png" alt="">
+                                    </p>
+                                    <!-- info -->
+                                    <p class="article-sec_info">
+                                        <!-- date -->
+                                        <span class="article-sec_date">2022.12.12</span>
+                                        <!-- category -->
+                                        <span class="article-sec_category">
+                                            撮影のこと									
+                                        </span>
+                                    </p>
+                                    <!-- ttl -->
+                                    <p class="article-sec_ttl">
+                                        【京都】京都府立植物園での家族写真
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="fadein scrollin">
+                                <a href="">
+                                    <!-- img -->
+                                    <p class="article-sec_img">
+                                        <img src="./images/blog2.png" alt="">
+                                    </p>
+                                    <!-- info -->
+                                    <p class="article-sec_info">
+                                        <!-- date -->
+                                        <span class="article-sec_date">2022.10.29</span>
+                                        <!-- category -->
+                                        <span class="article-sec_category">
+                                            日々のこと									
+                                        </span>
+                                    </p>
+                                    <!-- ttl -->
+                                    <p class="article-sec_ttl">【熊本】軽井沢のような素敵な場所</p>
+                                </a>
+                            </li>						
+                            <li class="fadein scrollin">
+                                <a href="">
+                                    <!-- img -->
+                                    <p class="article-sec_img">
+                                        <img src="./images/blog3.png" alt="">
+                                    </p>
+                                    <!-- info -->
+                                    <p class="article-sec_info">
+                                        <!-- date -->
+                                        <span class="article-sec_date">2021.10.31</span>
+                                        <!-- category -->
+                                        <span class="article-sec_category">
+                                            撮影のこと									
+                                        </span>
+                                    </p>
+                                    <!-- ttl -->
+                                    <p class="article-sec_ttl">
+                                        【長崎】ガーデンテラス長崎ホテル&amp;リゾートでの結婚式当日撮影
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- article-sec_link -->
+                        <p class="article-sec_link fadein scrollin">
+                            <a href="" class="sec-link">more</a>
+                        </p>
+                    </section>
+                    <section class="voice-sec article-sec fadein scrollin">
+
+                        <!-- ttl -->
+                        <h2 class="sec-ttl">
+                            <span class="jpn">お客様の声</span>
+                            <span class="eng">Voice</span>
+                        </h2>
+
+                        <!-- article-sec_list -->
+                        <ul class="article-sec_list fadein scrollin">
+                            
+                            <li class="fadein scrollin">
+                                <a href="">
+                                    <!-- img -->
+                                    <p class="article-sec_img">
+                                        <img src="./images/voice_1.png" alt="">
+                                    </p>
+                                    <!-- info -->
+                                    <p class="article-sec_info">
+                                        <!-- date -->
+                                        <span class="article-sec_date">2021.3.14</span>
+                                        <!-- category -->
+                                        <span class="article-sec_category">
+                                            家族写真								
+                                        </span>
+                                    </p>
+                                    <!-- ttl -->
+                                    <p class="article-sec_ttl">
+                                        【京都】ご自宅での家族写真
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="fadein scrollin">
+                                <a href="">
+                                    <!-- img -->
+                                    <p class="article-sec_img">
+                                        <img src="./images/voice_2.png" alt="">
+                                    </p>
+                                    <!-- info -->
+                                    <p class="article-sec_info">
+                                        <!-- date -->
+                                        <span class="article-sec_date">2020.10.6</span>
+                                        <!-- category -->
+                                        <span class="article-sec_category">
+                                            ロケーション前撮り									
+                                        </span>
+                                    </p>
+                                    <!-- ttl -->
+                                    <p class="article-sec_ttl">
+                                        【鹿児島】奄美大島でのロケーション前撮り
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="fadein scrollin">
+                                <a href="">
+                                    <!-- img -->
+                                    <p class="article-sec_img">
+                                        <img src="./images/voice_3.png" alt="">
+                                    </p>
+                                    <!-- info -->
+                                    <p class="article-sec_info">
+                                        <!-- date -->
+                                        <span class="article-sec_date">2019.8.13</span>
+                                        <!-- category -->
+                                        <span class="article-sec_category">
+                                            家族写真									
+                                        </span>
+                                    </p>
+                                    <!-- ttl -->
+                                    <p class="article-sec_ttl">
+                                        【長崎】グラバー園での家族写真
+                                    </p>
+                                </a>
+                            </li>						
+                        </ul>
+
+                        <!-- article-sec_link -->
+                        <p class="article-sec_link fadein scrollin">
+                            <a href="" class="sec-link">more</a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer_instagram-banner_wrapper">
+                    <a href="" class="footer_instagram-banner" target="_blank">
+
+                        <!-- banner-img -->
+                        <div class="instagram-banner_img">
+                            <p class="banner_bg-img">
+                                <img src="./images/insta_1.png" alt="">
+                            </p>
+                            <p class="banner_bg-img">
+                                <img src="./images/insta_2.png" alt="">
+                            </p>
+                            <p class="banner_bg-img">
+                                <img src="./images/insta_3.png" alt="">
+                            </p>
+                            <p class="banner_bg-img">
+                                <img src="./images/insta_4.png" alt="">
+                            </p>
+                        </div>
+
+                        <p class="instagram-banner_ttl">
+                            <span class="instagram-banner_icon">
+                                <img src="" alt="Instagram">
+                            </span>
+                            <span class="instagram-banner_name">Instagram</span>
+                        </p>
+                        <p class="instagram-banner_arrow"></p>
+                        
+                    </a>
+                </div>
+                <div class="footer-inner">
+
+                    <!-- page-top -->
+                    <a href="#header" class="page-top"></a>
+
+                    <!-- footer-gnav -->
+                    <ul class="footer-gnav">
+                        <li class="fnav01">
+                            <a href="/">ホーム</a>
+                        </li>
+                        <li class="fnav02">
+                            <a href="">私たちについて</a>
+                        </li>
+                        <li class="fnav03">
+                            <a href="">ギャラリー</a>
+                        </li>
+                        <li class="fnav04">
+                            <a href="">撮影プラン</a>
+                        </li>
+                        <li class="fnav05">
+                            <a href="">よくあるご質問</a>
+                        </li>
+                        <li class="fnav06">
+                            <a href="">お客様の声</a>
+                        </li>
+                        <li class="fnav07">
+                            <a href="">ブログ</a>
+                        </li>
+                        <li class="fnav08">
+                            <a href="">お問い合わせ</a>
+                        </li>
+                        <li class="fnav09">
+                            <a href="">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+
+                    <!-- footer_sns-link -->
+                    <div class="footer_sns-link">
+                        <a href="" class="facebook" target="_blank">
+                            <img src="https://studio-tremo.com/wp/wp-content/themes/studio-tremo/assets/images/common/icon-facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="" class="instagram" target="_blank">
+                            <img src="https://studio-tremo.com/wp/wp-content/themes/studio-tremo/assets/images/common/icon-instagram.svg" alt="Instagram">
+                        </a>
+                    </div>
+
+                    <!-- footer_logo-area -->
+                    <div class="footer_logo-area">
+                        <a href="/" class="footer_logo">
+                            <img src="" alt="Studio Tremo">
+                        </a>
+                        <p class="footer_logo-tagline">自分らしい、その瞬間を。</p>
+                    </div>
+                    <p class="footer_copyright">
+                        <small>© 2023 Studio Tremo.</small>
+                    </p>
+                    
+                </div>
+            </footer>
+        </div> 
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+        </script>
+    </body>
+</html>

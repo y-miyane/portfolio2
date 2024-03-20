@@ -1,0 +1,151 @@
+@media only screen and (min-width: 960px) {
+    
+/*-----------------------
+header
+-------------------------*/
+
+#top .trace-nav li.gnav01 a, #about .trace-nav li.gnav02 a, #gallery .trace-nav li.gnav03 a, 
+#plan .trace-nav li.gnav04 a, #qa .trace-nav li.gnav05 a, 
+#voice .trace-nav li.gnav06 a, #blog .trace-nav li.gnav07 a, 
+#contact .trace-nav li.gnav08 a {
+    color: #999;
+}
+
+#top #header {
+    margin-bottom: 0;
+}
+
+.sp {
+    display: none !important;
+}
+
+.loading-img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+    margin-left: -75px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+#contents-wrap {
+    position: relative;
+    opacity: 0;
+    transition: all 1.4s;
+}
+
+#contents-wrap.fade-in {
+    opacity: 1;
+}
+
+
+.trace-nav-set {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1.0);
+    z-index: 10000;
+    transition: all .6s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trace-nav-set.fixed {
+    visibility: visible;
+    opacity: 1;
+}
+
+.trace-nav-set-inner {
+    display: flex;
+    padding: 12px 0 11px;
+}
+
+.trace-nav_logo {
+    width: 140px;
+    height: auto;
+    padding-left: 30px;
+}
+
+.trace-nav {
+    width: calc(100% - 140px);
+    padding: 3px 30px 0 0;
+    text-align: right;
+}
+
+.trace-nav li {
+    display: inline-block;
+    margin-right: 1.5%;
+    vertical-align: middle;
+}
+
+.trace-nav li a {
+    padding: 0;
+    font-size: 1.1rem;
+    color: #111;
+    transition: all .3s;
+}
+
+
+
+
+
+
+
+
+
+/*-----------------------
+about
+-------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------
+ gallery
+-------------------------*/
+
+
+
+
+/*-----------------------
+plan
+-------------------------*/
+
+/*-----------------------
+article
+-------------------------*/
+
+
+
+
+
+
+/*-----------------------
+voice
+-------------------------*/
+
+
+
+/*-----------------------
+footer
+-------------------------*/
+
+
+}
