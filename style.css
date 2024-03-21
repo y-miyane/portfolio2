@@ -19,6 +19,10 @@ header
     display: none !important;
 }
 
+.pc {
+    display: block !important;
+}
+
 .loading-img {
     position: fixed;
     top: 50%;
@@ -92,7 +96,66 @@ header
     transition: all .3s;
 }
 
+.main-visual-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh)* 100 - 230px);
+    padding: 10px 10px 0 10px;
+}
 
+.top-header-nav-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 230px;
+    padding-left: 7.2%;
+}
+
+.top-header-nav-area_tagline {
+    padding-top: 2px;
+    color: #666;
+    letter-spacing: 0.1em;
+}
+
+.top-header-nav-area_tagline .jpn {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 2.1rem;
+    line-height: 1.4;
+    opacity: 0;
+}
+
+.top-header-nav-area_tagline .jpn span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(14px);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.12,.59,.41,.95);
+    transition-duration: 0.9s;
+}
+
+.top-header-nav-area_tagline .eng {
+    display: block;
+    padding-left: 3px;
+    font-size: 1.1rem;
+    transform: scale(1.0);
+    transform-origin: left top;
+    transition: all .8s;
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.header-gnav_pc {
+    position: absolute;
+    top: 42px;
+    right: 5%;
+    display: flex;
+}
+
+#top .header-gnav_pc {
+    top: 58px;
+}
 
 
 
