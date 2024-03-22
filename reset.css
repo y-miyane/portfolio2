@@ -11,6 +11,10 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, ul, ol, li, dl, dt, dd, table, capti
     box-sizing: border-box;
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
 a {
     color: #111;
     text-decoration: none;
