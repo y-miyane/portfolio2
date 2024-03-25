@@ -12,7 +12,7 @@
     </head>
     <body id="top">
         <div id="contents-wrap" class="fade-in">
-             <div class="trace-nav-set fixed">
+             <div class="trace-nav-set">
                     <div class="trace-nav-set-inner">
                         <p class="trace-nav_logo">
                             <a href="">
@@ -276,7 +276,7 @@
                 <section class="gallery-sec">
                     <div class="gallery-sec_img-slide_large-wrapper">
 					<div class="bx-wrapper">
-                        <div class="bx-viewport" aria-live="polite">
+                        <div class="bx-viewport">
                             <ul class="gallery-sec_img-slide_large fadein scrollin">
                                 <!-- 1 -->
                                 <li>
@@ -724,8 +724,8 @@
 
                     <!-- footer_logo-area -->
                     <div class="footer_logo-area">
-                        <a href="/" class="footer_logo">
-                            <img src="" alt="Studio Tremo">
+                        <a href="" class="footer_logo">
+                            <img src="" alt="">
                         </a>
                         <p class="footer_logo-tagline">自分らしい、その瞬間を。</p>
                     </div>
@@ -739,5 +739,19 @@
     
         <script src="https://code.jquery.com/jquery-3.5.1.min.js">
         </script>
+
+    <script>
+        
+        const header = document.querySelector('.trace-nav-set');
+        window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 600) {
+        header.classList.add('fixed');
+        } else {
+        header.classList.remove('fixed');
+        }
+        });
+
+    </script>
     </body>
 </html>

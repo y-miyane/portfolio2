@@ -1,0 +1,269 @@
+@media only screen and (min-width: 560px) {
+
+
+    #top .slide-menu_nav .gnav01 a, #about .slide-menu_nav .gnav02 a, #gallery .slide-menu_nav .gnav03 a, #plan .slide-menu_nav .gnav04 a, #qa .slide-menu_nav .gnav05 a, #voice .slide-menu_nav .gnav06 a, #blog .slide-menu_nav .gnav07 a, #contact .slide-menu_nav .gnav08 a, #privacy .slide-menu_nav .gnav09 a {
+        color: #666;
+    }
+
+    .trace-nav-set {
+        display: none;
+    }
+
+    #top #header {
+        margin-bottom: 0;
+    }
+
+
+
+
+
+    .slide-menu_btn {
+        position: fixed;
+        top: 22px;
+        right: 30px;
+        z-index: 10000;
+    }
+
+    .menu-trigger {
+        position: relative;
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-trigger, .menu-trigger span {
+        display: inline-block;
+        transition: all .3s;
+        box-sizing: border-box;
+    }
+
+    #top .menu-trigger span {
+        background-color: #eaeaea;
+    }
+
+    .menu-trigger span:nth-of-type(1) {
+        top: 16px;
+        left: 6px;
+    }
+
+    .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 1px;
+        background-color: #999;
+    }
+
+    .menu-trigger span:nth-of-type(2) {
+        top: 21px;
+        left: 6px;
+    }
+
+    .menu-trigger span:nth-of-type(3) {
+        bottom: 15px;
+        left: 6px;
+    }
+
+
+
+
+
+
+    .slide-menu_nav {
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 22% 0 10%;
+        background-color: rgba(250, 250, 250, 0.94);
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        z-index: 9000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+    }
+
+    .slide-menu_nav .gnav_sp {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slide-menu_nav .gnav_sp li {
+        position: relative;
+        margin-bottom: 4%;
+    }
+
+    .slide-menu_nav .gnav_sp a {
+        position: relative;
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        letter-spacing: 0.12em;
+    }
+
+    .slide-menu_nav .sns-nav_sp {
+        display: flex;
+        justify-content: center;
+        padding-top: 38px;
+    }
+
+
+
+
+
+    .main-visual-area {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        height: calc(var(--vh, 1vh)* 100 - 160px);
+        padding: 4px 4px 0 4px;
+    }
+
+
+
+
+
+
+
+
+    .top-header-nav-area {
+        display: flex;
+        align-items: center;
+        height: 160px;
+        padding-left: 9%;
+    }
+
+    .top-header-nav-area_tagline {
+        padding-top: 8px;
+        color: #666;
+        letter-spacing: 0.1em;
+    }
+
+    .top-header-nav-area_tagline .jpn {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.9rem;
+        line-height: 1.4;
+        opacity: 0;
+    }
+
+    .top-header-nav-area_tagline .jpn {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.9rem;
+        line-height: 1.4;
+        opacity: 0;
+    }
+
+    .top-header-nav-area_tagline .jpn span.move {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .top-header-nav-area_tagline .eng {
+        display: block;
+        padding-left: 2px;
+        font-size: 1.0rem;
+        transform: scale(1.0);
+        transform-origin: left top;
+        transition: all .8s;
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    .top-header-nav-area_tagline .eng.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    .swiper-container .m-slide04 {
+        height: calc(100vh - 160px);
+        height: calc(var(--vh, 1vh)* 100 - 160px);
+        
+        background-size: cover;
+    }
+    
+    .fade li {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        animation: fade 20s infinite;
+      }
+      
+      .swiper-wrapper .fade li:nth-child(1) {
+        animation-delay: 0s;
+      }
+      
+      .swiper-wrapper .fade li:nth-child(2) {
+        animation-delay: 5s;
+      }
+      
+      .swiper-wrapper .fade li:nth-child(3) {
+        animation-delay: 10s;
+      }
+    
+      .swiper-wrapper .fade li:nth-child(4) {
+        animation-delay: 15s; 
+    }
+    
+    
+    
+      .swiper-wrapper .fade li img {
+        width: 100%;
+        height: calc(var(--vh, 1vh)* 100 - 230px);
+        object-fit: cover;
+      }
+      
+    
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        15% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 1;
+        }
+        45% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
