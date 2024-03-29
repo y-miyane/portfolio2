@@ -1958,11 +1958,11 @@
         transform: translateY(0);
     }
     
-    .bx-viewport{
+    .gallery-sec_img-slide_large-wrapper .bx-viewport{
         width: 100%;
         overflow: hidden;
         position: relative;
-        height: 465px;
+        height: 534px;
     }
     
     
