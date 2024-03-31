@@ -86,10 +86,10 @@
                         </ul>
                         <div class="sns-nav_sp">
                             <a href="" class="facebook" target="_blank">
-                                <img src="" alt="Facebook">
+                                <img src="./images/icon-facebook.svg" alt="Facebook">
                             </a>
                             <a href="" class="instagram" target="_blank">
-                                <img src="" alt="Instagram">
+                                <img src="./images/icon-instagram.svg" alt="Instagram">
                             </a>
                         </div>
                     </div>
@@ -283,19 +283,22 @@
                                 <!-- 1 -->
                                 <li>
                                     <picture>
-                                        <img src="./images/gallery_top1.png" alt="">
+                                        <img src="./images/gallery_top1.png" alt="" class="pc">
+                                        <img src="./images/gallery_mini_1.png" alt="" class="sp">
                                     </picture>
                                 </li>
                                 <!-- 2 -->
                                 <li>
                                     <picture>
-                                        <img src="./images/ gallery_top2.png" alt="">
+                                        <img src="./images/gallery_top2.png" alt="" class="pc">
+                                        <img src="./images/gallery_mini_2.png" alt="" class="sp">
                                     </picture>
                                 </li>
                                 <!-- 3 -->
                                 <li>
                                     <picture>
-                                        <img src="./images/ gallery_top3.png" alt="">
+                                        <img src="./images/gallery_top3.png" alt="" class="pc">
+                                        <img src="./images/gallery_mini_3.png" alt="" class="sp">
                                     </picture>
                                 </li>
 					        </ul>
@@ -753,6 +756,34 @@
         header.classList.remove('fixed');
         }
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const menuTrigger = document.querySelector('.menu-trigger');
+        const slideMenu = document.querySelector('.slide-menu');
+        menuTrigger.addEventListener('click', function(event) {
+        event.preventDefault();        
+        this.classList.toggle('active');
+        slideMenu.classList.toggle('active');
+        });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const slideMenuBtn = document.querySelector('.slide-menu_btn');
+        const slideMenuNav = document.querySelector('.slide-menu_nav');
+
+        slideMenuBtn.addEventListener('click', function(event) {
+        event.preventDefault();         
+        const isOpen = slideMenuNav.classList.contains('open');
+
+        if (isOpen) {
+            slideMenuNav.classList.remove('open');
+        } else {
+            slideMenuNav.classList.add('open');
+        }
+        });
+        });
+
+
 
     </script>
     </body>
