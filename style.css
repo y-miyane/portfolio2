@@ -1130,7 +1130,7 @@ footer
 
 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     image-rendering: -webkit-optimize-contrast;
 }
 
@@ -1174,7 +1174,7 @@ img {
 
 .instagram-banner_name {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     letter-spacing: 0.06em;
 }
 
