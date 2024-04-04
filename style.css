@@ -772,6 +772,11 @@ about slide_end
     display: none;
 }
 
+.gallery-sec_img-slide_small img {
+    width: 300px !important;
+    height: auto;
+}
+
 
 /*-----------------------
 plan
@@ -820,8 +825,20 @@ plan
     padding: 45px 14% 45px;
     background-color: rgba(255, 255, 255, 0.6);
     transition: all 1.0s;
+    transform: translateY(100px);
     opacity: 0;
-    transform: translateY(20px);
+    animation-name: fadeIn;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 .plan-sec_category-list li.scrollin.marriage_cat {
@@ -971,6 +988,8 @@ plan
     opacity: 1;
     transform: translateY(0);
 }
+
+
 
 /*-----------------------
 article　blig&voice

@@ -2051,6 +2051,11 @@
     .gallery-sec_category-link li:last-child::before {
         display: none;
     }
+
+    .gallery-sec_img-slide_small img {
+        width: 460px !important;
+        height: auto;
+    }
     
     /*-----------------------
     plan
@@ -2397,6 +2402,39 @@
         background-size: 6px 11px;
         transition: all .3s;
     }
+
+
+    .fadein .scrollin {
+        animation-name:fadeUpAnime;
+        animation-duration:0.5s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+        animation-delay: 2s;
+
+        }
+        @keyframes fadeUpAnime{
+          from {
+            opacity: 0;
+          transform: translateY(100px);
+          }
+        
+          to {
+            opacity: 1;
+          transform: translateY(0);
+          }
+        }
+        
+        
+        
+        .delay-time02{
+        animation-delay: 0.2s;
+        }
+        
+        .delay-time04{
+        animation-delay: 0.4s;
+        }
+
+        
     
     
     /*-----------------------
