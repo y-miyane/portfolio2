@@ -1040,7 +1040,6 @@ article　blig&voice
 .article-sec_list li {
     margin-bottom: 40px;
     transition: all 1.0s;
-    opacity: 0;
     transform: translateY(20px);
 }
 
