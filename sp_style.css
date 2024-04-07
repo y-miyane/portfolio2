@@ -1336,18 +1336,6 @@
         opacity: 1;
     }
     
-    .trace-nav-set {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 1.0);
-        z-index: 10000;
-        transition: all .6s;
-        visibility: hidden;
-        opacity: 0;
-    }
     
     .trace-nav-set-inner {
         display: flex;
@@ -1404,64 +1392,71 @@
     
     
     
+
     
-    .swiper-wrapper{
+    .main-visual_slide {
         width: 100%;
         height: calc(var(--vh, 1vh)* 100 - 230px);
         position: relative;
-    }
-    
-    .fade li {
-        width: 100%;
+        overflow: hidden;
+      }
+      
+      .fade {
         position: absolute;
         top: 0;
-        right: 0;
-        opacity: 0;
-        animation: fade 20s infinite;
-      }
-      
-      .swiper-wrapper .fade li:nth-child(1) {
-        animation-delay: 0s;
-      }
-      
-      .swiper-wrapper .fade li:nth-child(2) {
-        animation-delay: 5s;
-      }
-      
-      .swiper-wrapper .fade li:nth-child(3) {
-        animation-delay: 10s;
-      }
-    
-      .swiper-wrapper .fade li:nth-child(4) {
-        animation-delay: 15s; 
-    }
-    
-    
-    
-      .swiper-wrapper .fade li img {
+        left: 0;
         width: 100%;
-        height: calc(var(--vh, 1vh)* 100 - 230px);
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      
+      .fade li {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        animation: fade 24s infinite;
+      }
+      
+      .fade li:nth-child(1) {
+        animation-delay: -2s;
+      }
+      
+      .fade li:nth-child(2) {
+        animation-delay: 6s;
+      }
+      
+      .fade li:nth-child(3) {
+        animation-delay: 14s;
+      }
+      
+      .fade li img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
       
-    
       @keyframes fade {
         0% {
           opacity: 0;
+          transform: scale(1);
         }
-        15% {
+        4% {
           opacity: 1;
         }
-        30% {
+        40% {
           opacity: 1;
         }
-        45% {
+        50% {
           opacity: 0;
+          transform: scale(1.2);
         }
         100% {
           opacity: 0;
         }
       }
+      
       
     
     
@@ -1851,25 +1846,26 @@
     /*-----------------------
      gallery_slide
     -------------------------*/
-    .gallery-sec_img-slide_large-wrapper li {
+    .gallery-sec_img-slide_large li {
         width: 100%;
         position: absolute;
         top: 0;
         right: 0;
         opacity: 0;
-        animation: fade 30s infinite;
+        animation: fade_gallery 20s infinite;
       }
+
       
       .gallery-sec_img-slide_large li:nth-child(1) {
         animation-delay: 0s;
       }
       
       .gallery-sec_img-slide_large li:nth-child(2) {
-        animation-delay: 10s;
+        animation-delay: 5s;
       }
       
       .gallery-sec_img-slide_large li:nth-child(3) {
-        animation-delay: 20s;
+        animation-delay: 10s;
       }
     
        
@@ -2131,17 +2127,17 @@
     }
     
     
-    
-    
-    .fadein_scrollin {
-        opacity: 0;
-        transform: translateY(50px); 
-        transition: opacity 0.5s ease, transform 0.5s ease;
+
+    .plan-sec_category-list .fadein .scrollin:nth-child(1) {
+        animation-delay: 2s; 
     }
     
-    .fadein_scrollin.active {
-        opacity: 1;
-        transform: translateY(0); 
+    .plan-sec_category-list .fadein .scrollin:nth-child(2) {
+        animation-delay: 2.1s; 
+    }
+    
+    .plan-sec_category-list .fadein .scrollin:nth-child(3) {
+        animation-delay: 2.3s; 
     }
 
 
@@ -2186,7 +2182,7 @@
     }
     
     .plan-sec_category-list .marriage_cat .cat-icon img {
-        width: 100%;
+        width: 120px;
     }
     
     .plan-sec_category-list .cat-lead {
@@ -2401,6 +2397,11 @@
         transition: all .3s;
     }
 
+
+
+
+
+
     .fadein_scrollin{
         animation-name: fadein_article;
         animation-duration: 1s;
@@ -2434,6 +2435,9 @@
         }
     }
 
+
+
+
     .article-sec_link .fadein_scrollin:nth-child(1) {
         animation-delay: 2s; 
     }
@@ -2445,6 +2449,7 @@
     .article-sec_link .fadein_scrollin:nth-child(3) {
         animation-delay: 2.3s; 
     }
+    
 
 
 

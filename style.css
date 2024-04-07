@@ -134,6 +134,58 @@ header
 }
 
 
+.slide-menu_nav .gnav01 {
+    opacity: 0;
+    transition: all .6s;
+}
+
+.slide-menu_nav .gnav02 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .04s;
+}
+
+.slide-menu_nav .gnav03 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .08s;
+}
+
+.slide-menu_nav .gnav04 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .12s;
+}
+
+.slide-menu_nav .gnav05 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .16s;
+}
+
+.slide-menu_nav .gnav06 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .20s;
+}
+
+.slide-menu_nav .gnav07 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .24s;
+}
+
+.slide-menu_nav .gnav08 {
+    opacity: 0;
+    transition: all .6s;
+    transition-delay: .28s;
+}
+
+.slide-menu_nav.open .gnav01, .slide-menu_nav.open .gnav02, .slide-menu_nav.open .gnav03, .slide-menu_nav.open .gnav04, .slide-menu_nav.open .gnav05, .slide-menu_nav.open .gnav06, .slide-menu_nav.open .gnav07, .slide-menu_nav.open .gnav08, .slide-menu_nav.open .gnav09 {
+    opacity: 1;
+}
+
+
 
 
 
@@ -317,7 +369,6 @@ header
 .menu-trigger.active span:nth-of-type(3) {
     transform: translateY(-4px) rotate(45deg);
 }
-
 
 
 
@@ -828,7 +879,7 @@ plan
     transform: translateY(100px);
     opacity: 0;
     animation-name: fadeIn;
-    animation-duration: 10s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -991,6 +1042,11 @@ plan
 
 
 
+
+
+
+
+
 /*-----------------------
 article　blig&voice
 -------------------------*/
@@ -1109,6 +1165,8 @@ article　blig&voice
     background: url(./images/link-arrow.svg) 0 0 no-repeat;
     background-size: 6px 11px;
 }
+
+  
 
 
 
