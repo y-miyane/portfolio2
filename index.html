@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./reset.css">
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="./sp_style.css">
-        <script src="./script.js"></script>
+        
         
     </head>
     <body id="top">
@@ -280,7 +280,7 @@
                     <div class="gallery-sec_img-slide_large-wrapper">
 					<div class="bx-wrapper">
                         <div class="bx-viewport">
-                            <ul class="gallery-sec_img-slide_large fadein scrollin">
+                            <ul class="gallery-sec_img-slide_large fadein">
                                 <!-- 1 -->
                                 <li>
                                     <picture>
@@ -400,15 +400,15 @@
                     </div>
                 </section>
 
-                <section class="plan-sec fadein scrollin">
+                <section class="plan-sec fadein">
                     <h2 class="sec-ttl">
                         <span class="jpn">撮影プラン</span>
                         <span class="eng">Plan</span>
                     </h2>
-                    <ul class="plan-sec_category-list fadein scrollin">
+                    <ul class="plan-sec_category-list fadein">
 
                         <!-- 1 -->
-                        <li class="marriage_cat fadein scrollin">
+                        <li class="marriage_cat fadein">
                             <section>
                                 <!-- cat-num -->
                                 <span class="cat-num">01</span>
@@ -431,7 +431,7 @@
                         </li>
 
                         <!-- 2 -->
-                        <li class="pre-shoot_cat fadein scrollin">
+                        <li class="pre-shoot_cat fadein">
                             <section>
                                 <!-- cat-num -->
                                 <span class="cat-num">02</span>
@@ -454,7 +454,7 @@
                         </li>
 
                         <!-- 3 -->
-                        <li class="family-photo_cat fadein scrollin">
+                        <li class="family-photo_cat fadein">
                             <section>
                                 <!-- cat-num -->
                                 <span class="cat-num">03</span>
@@ -476,17 +476,17 @@
                             </section>
                         </li>
                     </ul>
-                    <p class="plan-sec_sup-text fadein scrollin">
+                    <p class="plan-sec_sup-text fadein">
                         上記以外にもお客様のご希望に沿ったオリジナルのプランも可能です。
                         <br>
                         お気軽にお問い合わせよりご相談ください。
                     </p>
-                    <p class="plan-sec_link fadein scrollin">
+                    <p class="plan-sec_link fadein">
                         <a href="" class="sec-link">more</a>
                     </p>
                 </section>
                 <div class="article-sec-wrapper">
-                    <section class="blog-sec article-sec fadein scrollin">
+                    <section class="blog-sec article-sec fadein">
 
                         <!-- ttl -->
                         <h2 class="sec-ttl">
@@ -497,7 +497,7 @@
                         <!-- article-sec_list -->
                         <ul class="article-sec_list fadein scrollin">
                             
-                            <li class="fadein_scrollin">
+                            <li class="fadein scrollin">
                                 <a href="">
                                     <!-- img -->
                                     <p class="article-sec_img">
@@ -518,7 +518,7 @@
                                     </p>
                                 </a>
                             </li>
-                            <li class="fadein_scrollin">
+                            <li class="fadein scrollin">
                                 <a href="">
                                     <!-- img -->
                                     <p class="article-sec_img">
@@ -537,7 +537,7 @@
                                     <p class="article-sec_ttl">【熊本】軽井沢のような素敵な場所</p>
                                 </a>
                             </li>						
-                            <li class="fadein_scrollin">
+                            <li class="fadein scrollin">
                                 <a href="">
                                     <!-- img -->
                                     <p class="article-sec_img">
@@ -576,7 +576,7 @@
                         <!-- article-sec_list -->
                         <ul class="article-sec_list fadein scrollin">
                             
-                            <li class="fadein_scrollin">
+                            <li class="fadein scrollin">
                                 <a href="">
                                     <!-- img -->
                                     <p class="article-sec_img">
@@ -597,7 +597,7 @@
                                     </p>
                                 </a>
                             </li>
-                            <li class="fadein_scrollin">
+                            <li class="fadein scrollin">
                                 <a href="">
                                     <!-- img -->
                                     <p class="article-sec_img">
@@ -618,7 +618,7 @@
                                     </p>
                                 </a>
                             </li>
-                            <li class="fadein_scrollin">
+                            <li class="fadein scrollin">
                                 <a href="">
                                     <!-- img -->
                                     <p class="article-sec_img">
@@ -739,71 +739,9 @@
             </footer>
         </div> 
         <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            ScrollReveal({ 
-                reset: true,
-                distance:"20px",
-                duration: 2000,
-                delay:50,
-                });
-                ScrollReveal().reveal('.about-sec_text-area.scrollin .about-sec_ttl .jpn', { delay: 50, origin:"bottom"});
-                ScrollReveal().reveal('.about-sec_text-area.scrollin .about-sec_ttl .eng', { delay: 50, origin:"bottom"});
-                ScrollReveal().reveal('.about-sec_lead', { delay: 50, origin:"bottom"});
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
         
-        
-                ScrollReveal().reveal('.sec-ttl .jpn', { delay: 50, origin:"bottom"});
-                ScrollReveal().reveal('.sec-ttl .eng', { delay: 50, origin:"bottom"});
-                ScrollReveal().reveal('.sec-link', { delay: 50, origin:"bottom"});
-                ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
-        
-                ScrollReveal().reveal('.gallery-sec_inner.scrollin .gallery-sec_lead', { delay: 50, origin:"bottom"});
-
-                const header = document.querySelector('.trace-nav-set');
-                window.addEventListener('scroll', () => {
-                const scrollY = window.scrollY;
-                if (scrollY > 600) {
-                header.classList.add('fixed');
-                } else {
-                header.classList.remove('fixed');
-                }
-                });
-
-
-                const fadein = document.getElementsByClassName('blog-sec');
-                window.addEventListener('scroll' , () => {
-                    let scrollY =window.scrollY
-                    if(4000 < scrollY){
-                    fadein.classList.add('active');
-                    }
-                })
-
-                document.addEventListener('DOMContentLoaded', function() {
-                const slideMenuBtn = document.querySelector('.slide-menu_btn');
-                const slideMenuNav = document.querySelector('.slide-menu_nav');
-
-                slideMenuBtn.addEventListener('click', function(event) {
-                event.preventDefault();         
-                const isOpen = slideMenuNav.classList.contains('open');
-
-                if (isOpen) {
-                    slideMenuNav.classList.remove('open');
-                } else {
-                    slideMenuNav.classList.add('open');
-                }
-                });
-                });
-
-                document.addEventListener('DOMContentLoaded', function() {
-                const menuTrigger = document.querySelector('.menu-trigger');
-
-                menuTrigger.addEventListener('click', function() {
-                    menuTrigger.classList.toggle('active');
-                });
-                });
-
-
-        </script>
-    
-    
     </body>
 </html>

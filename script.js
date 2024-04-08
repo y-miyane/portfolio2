@@ -1,62 +1,81 @@
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ScrollReveal({ 
+    reset: true,
+    distance:"20px",
+    duration: 2000,
+    delay:50,
+    });
+    ScrollReveal().reveal('.about-sec_text-area.scrollin .about-sec_ttl .jpn', { delay: 50, origin:"bottom"});
+    ScrollReveal().reveal('.about-sec_text-area.scrollin .about-sec_ttl .eng', { delay: 50, origin:"bottom"});
+    ScrollReveal().reveal('.about-sec_lead', { delay: 50, origin:"bottom"});
 
-        $(function(){
-            $(window).scroll(function (){
-                $('.fadein_scrollin').each(function(){
-                    var position = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    if (scroll > position - windowHeight + 200){
-                        $(function(){
-                            $('.fadein_scrollin').each(function(i){
-                                $(this).delay(i * 200).queue(function(){
-                                    $(this).addClass('active');
-                                });
-                            });
-                        });
-                    }
-                });
+
+    ScrollReveal().reveal('.sec-ttl .jpn', { delay: 50, origin:"bottom"});
+    ScrollReveal().reveal('.sec-ttl .eng', { delay: 50, origin:"bottom"});
+    ScrollReveal().reveal('.sec-link', { delay: 50, origin:"bottom"});
+    ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
+
+    ScrollReveal().reveal('.gallery-sec_inner.scrollin .gallery-sec_lead', { delay: 50, origin:"bottom"});
+
+    const header = document.querySelector('.trace-nav-set');
+    window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 600) {
+    header.classList.add('fixed');
+    } else {
+    header.classList.remove('fixed');
+    }
+    });
+
+
+    const fadein = document.getElementsByClassName('blog-sec');
+    window.addEventListener('scroll' , () => {
+        let scrollY =window.scrollY
+        if(4000 < scrollY){
+        fadein.classList.add('active');
+        }
+    })
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const slideMenuBtn = document.querySelector('.slide-menu_btn');
+    const slideMenuNav = document.querySelector('.slide-menu_nav');
+
+    slideMenuBtn.addEventListener('click', function(event) {
+    event.preventDefault();         
+    const isOpen = slideMenuNav.classList.contains('open');
+
+    if (isOpen) {
+        slideMenuNav.classList.remove('open');
+    } else {
+        slideMenuNav.classList.add('open');
+    }
+    });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuTrigger = document.querySelector('.menu-trigger');
+
+    menuTrigger.addEventListener('click', function() {
+        menuTrigger.classList.toggle('active');
+    });
+    });
+
+
+    $(function(){
+        $(window).scroll(function (){
+            $('.fadein').each(function(){
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 200){
+                $(this).addClass('scrollin');
+                }
             });
         });
+    });
 
         
-        const header = document.querySelector('.trace-nav-set');
-        window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY > 600) {
-        header.classList.add('fixed');
-        } else {
-        header.classList.remove('fixed');
-        }
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-        const menuTrigger = document.querySelector('.menu-trigger');
-        const slideMenu = document.querySelector('.slide-menu');
-        menuTrigger.addEventListener('click', function(event) {
-        event.preventDefault();        
-        this.classList.toggle('active');
-        slideMenu.classList.toggle('active');
-        });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-        const slideMenuBtn = document.querySelector('.slide-menu_btn');
-        const slideMenuNav = document.querySelector('.slide-menu_nav');
-
-        slideMenuBtn.addEventListener('click', function(event) {
-        event.preventDefault();         
-        const isOpen = slideMenuNav.classList.contains('open');
-
-        if (isOpen) {
-            slideMenuNav.classList.remove('open');
-        } else {
-            slideMenuNav.classList.add('open');
-        }
-        });
-        });
-
+        
 
         
 
