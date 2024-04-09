@@ -763,19 +763,48 @@ about slide_end
 }
 
 
-.gallery-sec_img-slide_small{
-    width: 5215%;
-    position: relative;
-    transition-duration: 70s;
-    transition-timing-function: linear;
-    transform: translate3d(-1520px, 0px, 0px);
-}
 
 .gallery-sec_img-slide_small li {
     width: 300px !important;
     height: auto;
     margin-right: 4px;
 }
+
+
+@keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+    }
+    .gallery-sec_inner_slide .bx-viewport {
+      display: flex;
+      overflow: hidden;
+    }
+    .gallery-sec_img-slide_small {
+      display: flex;
+      list-style: none;
+      padding: 0
+    }
+    .gallery-sec_img-slide_small {
+      animation: infinity-scroll-left 120s infinite linear 0.5s both;
+    }
+    .gallery-sec_img__item {
+      width: calc(100vw / 6);
+    }
+    .gallery-sec_img__item>img {
+      width: 100%;
+    }
+
+
+
+
+
+
+
+
 
 
 

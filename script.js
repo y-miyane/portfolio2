@@ -14,8 +14,9 @@ ScrollReveal({
     ScrollReveal().reveal('.sec-ttl .eng', { delay: 50, origin:"bottom"});
     ScrollReveal().reveal('.sec-link', { delay: 50, origin:"bottom"});
     ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
+    ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
 
-    ScrollReveal().reveal('.gallery-sec_inner.scrollin .gallery-sec_lead', { delay: 50, origin:"bottom"});
+    
 
     const header = document.querySelector('.trace-nav-set');
     window.addEventListener('scroll', () => {
@@ -73,6 +74,33 @@ ScrollReveal({
             });
         });
     });
+
+
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $('.jpn').each(function() {
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                
+                if (objectBottom < windowBottom) {
+                    $(this).css('opacity', 1);
+                } else {
+                    $(this).css('opacity', 0);
+                }
+            });
+        }).scroll();
+    });
+
+   /* header-gnav_pcにクラスfade-inを追加*/
+
+   $(window).on('load', function () {
+    $('.header-gnav_pc').addClass("fade-in");
+});
+
+    
+    
+    
 
         
         
