@@ -98,6 +98,29 @@ ScrollReveal({
     $('.header-gnav_pc').addClass("fade-in");
 });
 
+
+    /* top-header-nav-area_taglineをopacity: 1;　spanにクラスmoveを追加*/
+document.addEventListener('DOMContentLoaded', function() {
+    const jpnParagraph = document.querySelector('.jpn');
+    const spanElements = document.querySelectorAll('.top-header-nav-area_tagline .jpn span');
+    
+    jpnParagraph.style.opacity = '1';
+
+    spanElements.forEach(function(span) {
+        span.classList.add('move');
+    });
+});
+
+
+    /* top-header-nav-area_tagline .engにクラスfade-inを追加*/
+$(window).on('load', function () {
+    $('.top-header-nav-area_tagline .eng').addClass("fade-in");
+});
+
+
+
+
+
     
     
     

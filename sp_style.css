@@ -1670,7 +1670,7 @@
           padding: 0
         }
         .gallery-sec_img-slide_small {
-          animation: infinity-scroll-left 600s infinite linear 2s both;
+          animation: infinity-scroll-left 150s infinite linear 2s both;
         }
         .gallery-sec_img__item {
           width: calc(100vw / 5);
