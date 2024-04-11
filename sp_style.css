@@ -226,6 +226,7 @@
         width: 100%;
         height: calc(var(--vh, 1vh)* 100 - 230px);
         object-fit: cover;
+        transform: scale(1.1);
       }
       
     
@@ -1456,6 +1457,13 @@
           opacity: 0;
         }
       }
+
+      .swiper-wrapper .fade li img {
+        width: 100%;
+        height: calc(var(--vh, 1vh)* 100 - 230px);
+        object-fit: cover;
+        transform: scale(1.1);
+      }
       
       
     
@@ -1854,49 +1862,10 @@
     /*-----------------------
      gallery
     -------------------------*/
-    .gallery-sec_img-slide_large-wrapper {
-        margin-bottom: 10px;
-        padding: 0 10px;
-    }
     
-    .gallery-sec_img-slide_large.scrollin {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .gallery-sec_img-slide_large li {
-        width: 100% !important;
-        height: auto;
-        margin-right: 10px;
-    }
-    
-    .gallery-sec_img-slide_large img {
-        width: 100% !important;
-        height: auto;
-    }
      
     
-    .gallery-sec_img-slide_small{
-        width: 5215%;
-        position: relative;
-        transition-duration: 70s;
-        transition-timing-function: linear;
-        
-    }
-    
-    .gallery-sec_img-slide_small li{
-        float: left;
-        list-style: none;
-        position: relative;
-        width: 118px;
-    }
-    
-    .gallery-sec_img-slide_small li {
-        width: 460px !important;
-        height: auto;
-        margin-right: 10px;
-    }
-    
+
     
     /*-----------------------
      gallery_slide
@@ -1955,6 +1924,26 @@
     /*-----------------------
      gallery_slide end
     -------------------------*/
+    .gallery-sec_img-slide_small{
+        width: 5215%;
+        position: relative;
+        transition-duration: 70s;
+        transition-timing-function: linear;
+        
+    }
+    
+    .gallery-sec_img-slide_small li{
+        float: left;
+        list-style: none;
+        position: relative;
+        width: 118px;
+    }
+    
+    .gallery-sec_img-slide_small li {
+        width: 460px !important;
+        height: auto;
+        margin-right: 10px;
+    }
     
     
     

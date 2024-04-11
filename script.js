@@ -10,8 +10,6 @@ ScrollReveal({
     ScrollReveal().reveal('.about-sec_lead', { delay: 50, origin:"bottom"});
 
 
-    ScrollReveal().reveal('.sec-ttl .jpn', { delay: 50, origin:"bottom"});
-    ScrollReveal().reveal('.sec-ttl .eng', { delay: 50, origin:"bottom"});
     ScrollReveal().reveal('.sec-link', { delay: 50, origin:"bottom"});
     ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
     ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
@@ -119,6 +117,58 @@ $(window).on('load', function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // IntersectionObserverの作成
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            // .plan-sec要素が画面内に入ったら
+            if (entry.isIntersecting) {
+                document.querySelector('.marriage_cat').classList.add('fadein');
+                document.querySelector('.marriage_cat').classList.add('scrollin');
+            }
+        });
+    });
+
+    // .plan-sec要素を取得して監視
+    const planSecElement = document.querySelector('.plan-sec');
+    observer.observe(planSecElement);
+});
+
+
+const planSecElement = document.querySelector('.plan-sec');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            planSecElement.classList.add('fadein', 'scrollin');
+        }
+    });
+});
+
+observer.observe(planSecElement);
+
+
+// blog
+document.addEventListener('DOMContentLoaded', function() {
+    const blogSecElement = document.querySelector('.blog-sec');
+
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const articleList = document.querySelector('.article-sec_list');
+                articleList.classList.add('fadein', 'scrollin');
+                const listItems = document.querySelectorAll('.article-sec_list li');
+                listItems.forEach(item => {
+                    item.classList.add('fadein', 'scrollin');
+                });
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection);
+
+    observer.observe(blogSecElement);
+});
 
 
     
