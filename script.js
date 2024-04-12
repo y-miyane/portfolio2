@@ -5,10 +5,7 @@ ScrollReveal({
     duration: 2000,
     delay:50,
     });
-    ScrollReveal().reveal('.about-sec_text-area.scrollin .about-sec_ttl .jpn', { delay: 50, origin:"bottom"});
-    ScrollReveal().reveal('.about-sec_text-area.scrollin .about-sec_ttl .eng', { delay: 50, origin:"bottom"});
-    ScrollReveal().reveal('.about-sec_lead', { delay: 50, origin:"bottom"});
-
+    
 
     ScrollReveal().reveal('.sec-link', { delay: 50, origin:"bottom"});
     ScrollReveal().reveal('.plan-sec_sup-text.scrollin', { delay: 50, origin:"bottom"});
@@ -90,6 +87,32 @@ ScrollReveal({
         }).scroll();
     });
 
+/* about-sec_text-areaにクラスfade-in　scrollinを追加*/
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const aboutSecElement = document.querySelector('.about-sec_text-area');
+    
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutSecElement.classList.add('fadein', 'scrollin');
+                }
+            });
+        }
+    
+        const observer = new IntersectionObserver(handleIntersection);
+    
+        observer.observe(aboutSecElement);
+    });
+    
+
+
+
+
+
+
+
+
    /* header-gnav_pcにクラスfade-inを追加*/
 
    $(window).on('load', function () {
@@ -169,6 +192,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(blogSecElement);
 });
+
+// voice
+document.addEventListener('DOMContentLoaded', function() {
+    const voiceSecElement = document.querySelector('.voice-sec');
+
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const articleSec = document.querySelector('.voice-sec .article-sec');
+                articleSec.classList.add('fadein', 'scrollin');
+                const articleList = document.querySelector('.voice-sec .article-sec_list');
+                articleList.classList.add('fadein', 'scrollin');
+                const listItems = document.querySelectorAll('.voice-sec .article-sec_list li');
+                listItems.forEach(item => {
+                    item.classList.add('fadein', 'scrollin');
+                });
+                const link = document.querySelector('.voice-sec .article-sec_link');
+                link.classList.add('fadein', 'scrollin');
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection);
+
+    observer.observe(voiceSecElement);
+});
+
+
+
+
+
 
 
     
