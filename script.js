@@ -253,25 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const articleSecList2 = document.querySelector('.article-sec_list');
 
-    function handleIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                articleSecList2.classList.add('fadein', 'scrollin');
-                const listItems = articleSecList2.querySelectorAll('.article-sec_list li');
-                listItems.forEach(item => {
-                    item.classList.add('fadein', 'scrollin');
-                });
-            }
-        });
-    }
-
-    const observer = new IntersectionObserver(handleIntersection);
-
-    observer.observe(articleSecList2);
-});
 
 
 
