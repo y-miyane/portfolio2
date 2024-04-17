@@ -2173,6 +2173,10 @@
         width: 460px !important;
         height: auto;
     }
+
+    .gallery-sec_category-link li a:hover {
+        color: #999; 
+    }
     
     /*-----------------------
     plan
@@ -2682,7 +2686,7 @@
     .instagram-banner_arrow::before {
         content: "";
         position: absolute;
-        right: 1px;
+        right: 22px;
         top: calc(50% + 16.5px);
         width: 27px;
         height: 1px;
@@ -2693,14 +2697,25 @@
     .instagram-banner_arrow::after {
         content: "";
         position: absolute;
-        right: 0;
+        right: 20px;
         top: 50%;
         width: 17px;
         height: 34px;
-        background: url(https://studio-tremo.com/wp/wp-content/themes/studio-tremo/assets/images/common/instagram-bnr-arrow.svg) 0 0 no-repeat;
+        background: url(./images/instagram-bnr-arrow.svg) 0 0 no-repeat;
         background-size: 17px 34px;
         transition: all .3s;
     }
+
+    .footer_instagram-banner_wrapper:hover .instagram-banner_arrow::before {
+        right: 10px;
+        width: 40px;
+    }
+
+    .footer_instagram-banner_wrapper:hover .instagram-banner_arrow::after {
+        right: 10px;
+        
+    }
+    
     
     .footer-inner {
         position: relative;
@@ -2745,6 +2760,15 @@
         background: url(./images/page-top-arrow.svg) 0 0 no-repeat;
         background-size: 28px 14px;
         transition: all .3s;
+    }
+
+    .page-top:hover::before {
+        top: -5px;
+        height: 28px;
+    }
+    
+    .page-top:hover::after {
+        top: -5px;
     }
     
     .footer-gnav {

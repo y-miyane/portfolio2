@@ -196,24 +196,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const articleListElement = document.querySelector('.article-sec_list');
 
-    function handleIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                articleListElement.classList.add('fadein', 'scrollin');
-                const listItems = articleListElement.querySelectorAll('li');
-                listItems.forEach(item => {
-                    item.classList.add('fadein', 'scrollin');
-                });
-            }
-        });
-    }
-
+    const articleSecList = document.querySelectorAll('.article-sec_list');
     const observer = new IntersectionObserver(handleIntersection);
-
-    observer.observe(articleListElement);
-});
+    
+    
+    articleSecList.forEach(handleIntersection => {
+        observer.observe(handleIntersection);
+    });
+    
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadein', 'scrollin');
+                    var listItems = entry.target.children;
+                    for (let i = 0; i < listItems.length; i++) {
+                        listItems[i].classList.add('fadein', 'scrollin');
+                    }
+                }
+            });
+        }
+    });
 
 
 document.addEventListener('DOMContentLoaded', function() {
