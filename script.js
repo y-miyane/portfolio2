@@ -147,27 +147,54 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(planSec);
 });
 
-    /* .plan-sec_category-listにクラスfade-inを追加*/
+    /* .plan-secにクラスfade-inを追加*/
 
-document.addEventListener('DOMContentLoaded', function() {
-    const categoryList = document.querySelector('.plan-sec_category-list');
 
-    function handleIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                categoryList.classList.add('fadein', 'scrollin');
-                const listItems = categoryList.querySelectorAll('li');
-                listItems.forEach(item => {
-                    item.classList.add('fadein', 'scrollin');
-                });
-            }
-        });
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const marriageCat = document.querySelector('.marriage_cat');
+        const observer = new IntersectionObserver(handleIntersection);
+        
+        observer.observe(marriageCat);
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadein', 'scrollin');
+                }
+            });
+        }
+    });
 
-    const observer = new IntersectionObserver(handleIntersection);
+    document.addEventListener('DOMContentLoaded', function() {
+        const preShootCat = document.querySelector('.pre-shoot_cat');
+        const observer = new IntersectionObserver(handleIntersection);
+        
+        observer.observe(preShootCat);
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadein', 'scrollin');
+                }
+            });
+        }
+    });
 
-    observer.observe(categoryList);
-});
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const familyPhotoCat = document.querySelector('.family-photo_cat');
+        const observer = new IntersectionObserver(handleIntersection);
+        observer.observe(familyPhotoCat);
+        
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadein', 'scrollin');
+                }
+            });
+        }
+    });
+
+
+
 
 
 

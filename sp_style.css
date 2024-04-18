@@ -1353,6 +1353,8 @@
         width: 100%;
         height: 100%;
     }
+
+    
     
     .loading-img {
         position: fixed;
@@ -1896,6 +1898,8 @@
         letter-spacing: 0.05em;
         transition: color .3s;
     }
+
+    
     
     .about-sec_link {
         padding-right: 8.5%;
@@ -1905,6 +1909,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     
     .about-sec_text-area.scrollin .about-sec_ttl .jpn {
         opacity: 1;
@@ -2207,6 +2212,10 @@
         width: 100%;
         height: 310px;
         background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+
+    .sec-link:hover {
+        color: #999; 
     }
     
     .sec-ttl .jpn {
@@ -2532,7 +2541,7 @@
     .article-sec_list li:last-child {
         margin: 0;
     }
-    
+
     .article-sec_link {
         position: absolute;
         top: 68px;
@@ -2571,6 +2580,41 @@
         background: url(./images/link-arrow.svg) 0 0 no-repeat;
         background-size: 6px 11px;
         transition: all .3s;
+    }
+
+    .sec-link:hover::before {
+        right: -5px;
+        width: 11px;
+    }
+    
+    .sec-link:hover::after  {
+        right: -10px;
+    }
+    
+    
+    .article-sec_link_2 {
+        position: absolute;
+        top: 68px;
+        right: 70px;
+        text-align: right;
+        transition: all .8s;
+        transition-delay: .3s;
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    
+    .article-sec_link_2.scrollin {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    
+    .article-sec_list li img {
+        transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    .article-sec_list li:hover img {
+        opacity: 0.5; 
     }
 
 
