@@ -1,14 +1,16 @@
 
-ScrollReveal({ 
-    reset: true,
-    distance:"20px",
-    duration: 2000,
-    delay:50,
+/* menuボタン*/
+
+    document.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+        if (scrollTop > 750) {
+            document.querySelector('.menu-trigger').classList.add('menu-color-black');
+        } else {
+            document.querySelector('.menu-trigger').classList.remove('menu-color-black');
+        }
     });
     
-
-    
-
     const header = document.querySelector('.trace-nav-set');
     window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -43,6 +45,8 @@ ScrollReveal({
     }
     });
     });
+
+/* menuボタン　end*/
 
     document.addEventListener('DOMContentLoaded', function() {
     const menuTrigger = document.querySelector('.menu-trigger');

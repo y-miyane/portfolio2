@@ -437,6 +437,10 @@ header
     background-color: #eaeaea;
 }
 
+#top .menu-trigger.menu-color-black span {
+    background-color: #999;
+}
+
 #top .menu-trigger.active span {
     background-color: #999;
 }
