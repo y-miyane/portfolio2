@@ -160,6 +160,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const targetElement_2 = document.querySelector('.gallery-sec_img-slide_large_sp');
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0 });
+
+    observer.observe(targetElement_2);
+
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                targetElement_2.classList.add('fadein', 'scrollin');
+                observer.unobserve(targetElement_2); // クラスを追加したら監視を停止する場合
+            }
+        });
+    }
+});
+
+
 
 
 /* gallery-sec_inner .engにクラスfade-inを追加*/
