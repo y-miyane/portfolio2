@@ -114,7 +114,55 @@ $(window).on('load', function () {
 });
 
 
-     /* gallery-sec_inner .engにクラスfade-inを追加*/
+// gallery large slide
+$(function() {
+	setInterval(function () {
+		var index = $('.gallery-sec_img').index($('.gallery-sec_img.isCurrent')),
+		next = index + 1;
+		if (next === $('.gallery-sec_img').length) {
+			next = 0;
+		}
+		$('.gallery-sec_img.isCurrent').removeClass('isCurrent');
+		$('.gallery-sec_img').eq(next).addClass('isCurrent');
+	}, 3500);
+	$('.gallery-sec_img').eq(0).addClass('isCurrent');
+});
+
+$(function() {
+	setInterval(function () {
+		var index = $('.gallery-sec_img_sp').index($('.gallery-sec_img_sp.isCurrent')),
+		next = index + 1;
+		if (next === $('.gallery-sec_img_sp').length) {
+			next = 0;
+		}
+		$('.gallery-sec_img_sp.isCurrent').removeClass('isCurrent');
+		$('.gallery-sec_img_sp').eq(next).addClass('isCurrent');
+	}, 3500);
+	$('.gallery-sec_img_sp').eq(0).addClass('isCurrent');
+});
+
+
+
+// .gallery-sec_img-slide_largeにfade-inを追加
+document.addEventListener('DOMContentLoaded', function() {
+    const targetElement = document.querySelector('.gallery-sec_img-slide_large');
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0 });
+
+    observer.observe(targetElement);
+
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                targetElement.classList.add('fadein', 'scrollin');
+                observer.unobserve(targetElement); 
+            }
+        });
+    }
+});
+
+
+
+/* gallery-sec_inner .engにクラスfade-inを追加*/
 document.addEventListener('DOMContentLoaded', function() {
     const gallerySecInner = document.querySelector('.gallery-sec_inner');
 
@@ -225,31 +273,28 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
+// blogの3枚の画像
 document.addEventListener('DOMContentLoaded', function() {
-
-    const articleSecList = document.querySelectorAll('.article-sec_list');
+    const articleSecList = document.querySelectorAll('.article-sec_list li');
     const observer = new IntersectionObserver(handleIntersection);
-    
-    
-    articleSecList.forEach(handleIntersection => {
-        observer.observe(handleIntersection);
-    });
-    
-        function handleIntersection(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fadein', 'scrollin');
-                    var listItems = entry.target.children;
-                    for (let i = 0; i < listItems.length; i++) {
-                        listItems[i].classList.add('fadein', 'scrollin');
-                    }
-                }
-            });
-        }
+
+    articleSecList.forEach((item, index) => {
+        observer.observe(item);
     });
 
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const targetIndex = Array.from(entry.target.parentNode.children).indexOf(entry.target) + 1;
+                const targetListItem = document.querySelector('.article-sec_list li:nth-child(' + targetIndex + ')');
+                targetListItem.classList.add('fadein', 'scrollin');
+            }
+        });
+    }
+});
 
+
+// blogリンク
 document.addEventListener('DOMContentLoaded', function() {
     const articleLinkElement = document.querySelector('.article-sec_link');
 
@@ -286,11 +331,26 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(voiceSecElement);
 });
 
+// voiceの3枚の画像
+document.addEventListener('DOMContentLoaded', function() {
+    const articleSecList = document.querySelectorAll('.article-sec_list li');
+    const observer = new IntersectionObserver(handleIntersection);
+
+    articleSecList.forEach((item, index) => {
+        observer.observe(item);
+    });
+
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fadein', 'scrollin');
+            }
+        });
+    }
+});
 
 
-
-
-
+// voiceリンク
 document.addEventListener('DOMContentLoaded', function() {
     const articleSecLink = document.querySelector('.article-sec_link_2');
 
@@ -306,6 +366,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(articleSecLink);
 });
+
+
+
 
 
 

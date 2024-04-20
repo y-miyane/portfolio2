@@ -7,7 +7,7 @@
         <title>模写コーディング | 写真館</title>
         <link rel="stylesheet" href="./reset.css">
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./sp_style.css">
+        <link rel="stylesheet" href="./pc_style.css">
         
         
     </head>
@@ -174,7 +174,6 @@
             <div id="contents">
                 <section class="about-sec">
                     <div class="about-sec_img-slide-wrapper">
-                        <div class="bx-wrapper">
                             <div class="scroll-infinity">
                             
                                 <ul class="about-sec_img-slide">
@@ -282,7 +281,6 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>  
                     </div>
                     <div class="about-sec_text-area">
 
@@ -331,25 +329,37 @@
 
                 <section class="gallery-sec">
                     <div class="gallery-sec_img-slide_large-wrapper">
-					<div class="bx-wrapper">
-                        <div class="bx-viewport">
-                            <ul class="gallery-sec_img-slide_large fadein">
+                            <ul class="gallery-sec_img-slide_large">
                                 <!-- 1 -->
-                                <li>
+                                <li class="gallery-sec_img">
                                     <img src="./images/gallery_top1.png" alt="">
                                 </li>
                                 <!-- 2 -->
-                                <li>
+                                <li class="gallery-sec_img">
                                     <img src="./images/gallery_top2.png" alt="">
                                 </li>
                                 <!-- 3 -->
-                                <li>
+                                <li class="gallery-sec_img">
                                     <img src="./images/gallery_top3.png" alt="">
                                 </li>
 					        </ul>
-                        </div>
-				    </div>
+                            <ul class="gallery-sec_img-slide_large_sp">
+                                <!-- 1 -->
+                                <li class="gallery-sec_img_sp">
+                                    <img src="./images/gallery_mini_1.png" alt="">
+                                </li>
+                                <!-- 2 -->
+                                <li class="gallery-sec_img_sp">
+                                    <img src="./images/gallery_mini_2.png" alt="">
+                                </li>
+                                <!-- 3 -->
+                                <li class="gallery-sec_img_sp">
+                                    <img src="./images/gallery_mini_3.png" alt="">
+                                </li>
+					        </ul>
+
                     </div>
+                    
                     <div class="gallery-sec_inner">
                         <div class="gallery-sec_inner_text">
 
@@ -373,7 +383,6 @@
                         <div class="gallery-sec_inner_slide">
 
 						<!-- gallery-sec_img-slide_small -->
-						<div class="bx-wrapper">
                             <div class="bx-viewport">
                                 <ul class="gallery-sec_img-slide_small">
                                     <li class="gallery-sec_img__item">
@@ -481,8 +490,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-
+                        
 						<!-- gallery-sec_category-link -->
                             <ul class="gallery-sec_category-link">
                                 <li>

@@ -19,7 +19,9 @@
         image-rendering: -webkit-optimize-contrast;
     }
 
-
+    .gallery-sec_img-slide_large_sp{
+        display: none;
+    }
 
     .main-visual_logo {
         position: absolute;
@@ -484,18 +486,11 @@
     }
 
 
-    .gallery-sec_img-slide_large-wrapper .bx-viewport{
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        height: 355px;
-    }
-
     .gallery-sec_img-slide_large {
         position: relative;
         width: 100%;
         transition: all 1.5s;
-        opacity: 0;
+        
         transform: translateY(15px);
     }
 
@@ -528,54 +523,38 @@
         margin-right: 4px;
     }
 
-    .gallery-sec_img-slide_large li {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        opacity: 0;
-        animation: fade_gallery 30s infinite;
-    }
     
-    .gallery-sec_img-slide_large li:nth-child(1) {
-        animation-delay: 0s;
-    }
-    
-    .gallery-sec_img-slide_large li:nth-child(2) {
-        animation-delay: 10s;
-    }
-    
-    .gallery-sec_img-slide_large li:nth-child(3) {
-        animation-delay: 20s;
-    }
-
     .gallery-sec_img-slide_large img{
         width: 100%;
         height: auto;
         object-fit: cover;
     }
     
-    @keyframes fade_gallery {
-        0% {
-          opacity: 0;
-        }
-        15% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 1;
-        }
-        45% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
 
 
 
 
+
+    .gallery-sec_img-slide_large {
+        position: relative;
+    }
+
+    .gallery-sec_img-slide_large .gallery-sec_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition-duration: 2s;
+        transition-property: opacity;
+        transition-delay: 0.2s;
+    }
+
+    .gallery-sec_img.isCurrent {
+        z-index: 1;
+        position: relative;
+        opacity: 1;
+        transition-delay: 0s;
+    }
 
 
 
@@ -708,13 +687,6 @@
         display: none;
     }
 
-    .gallery-sec_inner_slide .bx-viewport{
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        height: 261px;
-    }
-
 
 
 
@@ -728,7 +700,7 @@
     .plan-sec {
         position: relative;
         padding: 130px 10% 140px;
-        background: url(https://studio-tremo.com/wp/wp-content/themes/studio-tremo/assets/images/top/plan-sec-bg_pc.jpg) center center no-repeat;
+        background: url(./images/plan-sec-bg_pc.jpg) center center no-repeat;
         background-size: cover;
     }
 
@@ -963,6 +935,11 @@
         line-height: 1.6;
     }
     
+    .article-sec .sec-ttl .jpn {
+        transition: all .8s;
+        opacity: 0;
+        transform: translateY(8px);
+    }
 
     .article-sec.scrollin .sec-ttl .jpn {
         opacity: 1;
@@ -1946,50 +1923,25 @@
     /*-----------------------
      gallery_slide
     -------------------------*/
-    .gallery-sec_img-slide_large li {
-        width: 100%;
+    .gallery-sec_img-slide_large-wrapper {
+        position: relative;
+    }
+    .gallery-sec_img {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         opacity: 0;
-        animation: fade_gallery 30s infinite;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+        transition-delay: 0.2s;
     }
-    
-    .gallery-sec_img-slide_large li:nth-child(1) {
-        animation-delay: 0s;
-    }
-    
-    .gallery-sec_img-slide_large li:nth-child(2) {
-        animation-delay: 10s;
-    }
-    
-    .gallery-sec_img-slide_large li:nth-child(3) {
-        animation-delay: 20s;
+    .gallery-sec_img.isCurrent {
+        z-index: 1;
+        position: relative;
+        opacity: 1;
+        transition-delay: 0s;
     }
 
-    .gallery-sec_img-slide_large img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    
-    @keyframes fade_gallery {
-        0% {
-          opacity: 0;
-        }
-        15% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 1;
-        }
-        45% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
     
     
     
@@ -2027,13 +1979,6 @@
         display: flex;
         flex-direction: row-reverse;
         padding: 0 10px;
-    }
-    
-    .gallery-sec_inner_slide .bx-viewport{
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        height: 300px;
     }
     
     .gallery-sec_inner.scrollin .gallery-sec_category-link {
@@ -2103,13 +2048,7 @@
         transform: translateY(0);
     }
     
-    .gallery-sec_img-slide_large-wrapper .bx-viewport{
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        height: 41rem;
-    }
-    
+
     
     
     
@@ -2190,7 +2129,7 @@
         position: relative;
         margin-bottom: 15px;
         padding: 200px 10% 260px;
-        background: url(https://studio-tremo.com/wp/wp-content/themes/studio-tremo/assets/images/top/plan-sec-bg_pc.jpg) center center no-repeat;
+        background: url(./images/plan-sec-bg_pc.jpg) center center no-repeat;
         background-size: cover;
     }
     
@@ -2492,7 +2431,29 @@
     }
     
     
+
+    .article-sec_list li:nth-child(1).scrollin {
+        opacity: 1;
+        transform: translateY(0);
+    }
     
+    .article-sec_list li:nth-child(2).scrollin {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: .1s;
+    }
+    
+    .article-sec_list li:nth-child(3).scrollin {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: .2s;
+    }
+    
+    .article-sec_list li:last-child {
+        margin: 0;
+    }
+
+
     .article-sec_img {
         margin-bottom: 30px;
         transition: opacity .4s;
@@ -2524,23 +2485,8 @@
         font-size: 0.9rem;
     }
 
-    
-    
-    .article-sec_list li:nth-child(2).scrollin {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: .1s;
-    }
-    
-    .article-sec_list li:nth-child(3).scrollin {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: .2s;
-    }
-    
-    .article-sec_list li:last-child {
-        margin: 0;
-    }
+
+
 
     .article-sec_link {
         position: absolute;
@@ -2616,12 +2562,6 @@
     .article-sec_list li:hover img {
         opacity: 0.5; 
     }
-
-
-
-
-
-
     
     
 
