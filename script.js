@@ -22,13 +22,7 @@
     });
 
 
-    const fadein = document.getElementsByClassName('blog-sec');
-    window.addEventListener('scroll' , () => {
-        let scrollY =window.scrollY
-        if(4000 < scrollY){
-        fadein.classList.add('active');
-        }
-    })
+
 
     document.addEventListener('DOMContentLoaded', function() {
     const slideMenuBtn = document.querySelector('.slide-menu_btn');
@@ -220,6 +214,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     document.addEventListener('DOMContentLoaded', function() {
+        const targetElement = document.querySelector('.plan-sec_sup-text');
+        const observer = new IntersectionObserver(handleIntersection);
+    
+        observer.observe(targetElement);
+    
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    targetElement.classList.add('fadein', 'scrollin');
+                    observer.unobserve(targetElement); 
+                }
+            });
+        }
+    });
+    
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const targetElement = document.querySelector('.plan-sec_link');
+        const observer = new IntersectionObserver(handleIntersection);
+    
+        observer.observe(targetElement);
+    
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    targetElement.classList.add('fadein', 'scrollin');
+                    observer.unobserve(targetElement); 
+                }
+            });
+        }
+    });
+    
+
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
         const marriageCat = document.querySelector('.marriage_cat');
         const observer = new IntersectionObserver(handleIntersection);
         
@@ -383,6 +418,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(articleSecLink);
 });
+
+
+
+// topへ戻るボタン
+
+$(document).ready(function() {
+    $('.page-top').click(function(event) {
+        event.preventDefault();
+        const target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000); 
+    });
+});
+
 
 
 
