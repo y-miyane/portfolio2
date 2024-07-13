@@ -1,6 +1,5 @@
 @media only screen and (min-width: 560px) {
 
-
     #top .slide-menu_nav .gnav01 a, #about .slide-menu_nav .gnav02 a, #gallery .slide-menu_nav .gnav03 a, #plan .slide-menu_nav .gnav04 a, #qa .slide-menu_nav .gnav05 a, #voice .slide-menu_nav .gnav06 a, #blog .slide-menu_nav .gnav07 a, #contact .slide-menu_nav .gnav08 a, #privacy .slide-menu_nav .gnav09 a {
         color: #666;
     }
@@ -81,12 +80,6 @@
         left: 6px;
     }
 
-    
-
-
-
-
-
 
     .slide-menu_nav {
         box-sizing: border-box;
@@ -129,10 +122,6 @@
         padding-top: 38px;
     }
 
-
-
-
-
     .main-visual-area {
         position: relative;
         width: 100%;
@@ -140,13 +129,6 @@
         height: calc(var(--vh, 1vh)* 100 - 160px);
         padding: 4px 4px 0 4px;
     }
-
-
-
-
-
-
-
 
     .top-header-nav-area {
         display: flex;
@@ -169,8 +151,6 @@
         
     }
 
-    
-
     .top-header-nav-area_tagline .jpn span.move {
         opacity: 1;
         transform: translateY(0);
@@ -188,8 +168,6 @@
         transform: translateY(8px);
     }
 
-    
-
 
     .swiper-container .m-slide04 {
         height: calc(100vh - 160px);
@@ -205,67 +183,61 @@
         right: 0;
         opacity: 0;
         animation: fade 20s infinite;
-      }
+    }
       
       .swiper-wrapper .fade li:nth-child(1) {
         animation-delay: 0s;
-      }
+    }
       
       .swiper-wrapper .fade li:nth-child(2) {
         animation-delay: 5s;
-      }
+    }
       
       .swiper-wrapper .fade li:nth-child(3) {
         animation-delay: 10s;
-      }
+    }
     
       .swiper-wrapper .fade li:nth-child(4) {
         animation-delay: 15s; 
     }
     
     
-    
-      .swiper-wrapper .fade li img {
+    .swiper-wrapper .fade li img {
         width: 100%;
         height: calc(var(--vh, 1vh)* 100 - 160px);
         object-fit: cover;
         transform: scale(1.2);
-      }
-      
+    }
     
-      @keyframes fade {
+
+    @keyframes fade {
         0% {
-          opacity: 0;
-          transform: scale(1);
+            opacity: 0;
+            transform: scale(1);
         }
         4% {
-          opacity: 1;
+            opacity: 1;
         }
         40% {
-          opacity: 1;
+            opacity: 1;
         }
         50% {
-          opacity: 0;
-          transform: scale(0.9);
+            opacity: 0;
+            transform: scale(0.9);
         }
         100% {
-          opacity: 0;
+            opacity: 0;
         }
-      }
-    
+    }
 
     .top-header-nav-area_tagline .jpn span.move {
         opacity: 1;
         transform: translateY(0);
     }
 
-
     .pc {
         display: none !important;
     }
-
-
-
 
 
 /* ---------------
@@ -468,15 +440,6 @@
         height: 368px;
     }
 
-
-
-
-
-
-
-
-
-
 /* ---------------
     gallery
 -------------------*/
@@ -530,11 +493,6 @@
         object-fit: cover;
     }
     
-
-
-
-
-
     .gallery-sec_img-slide_large {
         position: relative;
     }
@@ -555,14 +513,6 @@
         opacity: 1;
         transition-delay: 0s;
     }
-
-
-
-    
-
-
-
-
 
     .gallery-sec_inner_text {
         margin-bottom: 60px;
@@ -628,9 +578,6 @@
         transform: translateY(0);
     }
 
-
-
-
     .gallery-sec_img-slide_small li {
         width: 400px !important;
         height: auto;
@@ -687,15 +634,9 @@
         display: none;
     }
 
-
-
-
-
-
 /* ---------------
    plan 
 -------------------*/
-
 
     .plan-sec {
         position: relative;
@@ -901,8 +842,6 @@
     opacity: 1;
     transform: translateY(0);
     }
-
-
 
 /* ---------------
    article  
@@ -1262,15 +1201,6 @@
         z-index: -5;
     }
 
-
-
-
-
-
-
-
-
-    
 }
 
 
@@ -1633,12 +1563,6 @@
         transition-delay: .54s;
     }
 
-
-
-
-
-
-
     
     .header-gnav_pc li {
         width: 15px;
@@ -1944,11 +1868,6 @@
 
     
     
-    
-    
-    
-    
-    
     /*-----------------------
      gallery_slide end
     -------------------------*/
@@ -2247,9 +2166,6 @@
     }
 
 
-
-
-
     
     .plan-sec_category-list .cat-num {
         display: block;
@@ -2367,10 +2283,6 @@
         height: 7px;
         background-color: #111;
     }
-
-
-      
-      
     
     
     /*-----------------------
@@ -2841,7 +2753,4 @@
         filter: brightness(125%);
     }
 
-    
-    
-    
-    }
+}
